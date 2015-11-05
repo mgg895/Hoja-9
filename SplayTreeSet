@@ -1,0 +1,23 @@
+# Hoja-9
+public class SplayTreeSet implements WordSet{
+        
+    private SplayTree base; 
+        
+    
+    public SplayTreeSet(){
+        base = new SplayTree();
+    }
+
+   
+    @Override
+    public Word get(Word word){
+        Word temp = (Word)base.find(word);
+        return temp;
+    }
+    
+    @Override
+    public void add(Word wordObject){
+        base.insert(wordObject);
+    }
+    
+}
