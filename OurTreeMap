@@ -1,0 +1,31 @@
+# Hoja-9
+/* Universidad del Valle de Guatemala 
+   Algoritmos y estructura de datos - Seccion 20
+   Hoja de Trabajo 9 
+   Mynor Franco 14142
+   Miguel Godoy 14425
+   Francisco Zelada 14208
+*/
+
+import java.util.*;
+
+class OurTreeMap extends TreeMap implements WordSet{
+	TreeMap<String, Word> palabras;
+	
+	//Constructor
+	public OurTreeMap(){
+		palabras = new TreeMap<String, Word>(); 
+	}
+	
+	public void add(Word wordObject)
+	{
+		String key = wordObject.getWord();
+		palabras.put(key,wordObject);
+	}
+	
+	public Word get(Word word)
+	{
+		String key = word.getWord();
+		return palabras.get(key);
+	}
+}
